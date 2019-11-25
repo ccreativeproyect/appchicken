@@ -1,0 +1,446 @@
+
+*,
+*::before,
+*::after{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    --color-fondo: #444;
+    --color-icon: #fff;
+    /* --color-container: blueviolet; */
+    /* --color-container: rgb(13, 168, 39); */
+    --color-container: #13BB38;
+    /* --color-menu: rgba(0, 255, 179, 0.5); */
+    --color-menu: rgba(224, 211, 25, 0.5);
+}
+
+body{
+    background-color: var(--color-fondo);
+    font-family: 'Roboto', sans-serif;
+}
+
+/* CONTENEDOR PRINCIPAL */
+.main-container{
+    max-width: 900px;
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    /* background-color: var(--color-container); */
+    height: 100vh;
+    
+}
+/* MENU PRINCIPAL DE NAVEGACION VERTICAL */
+/* SE PODRIA PONER EL MENU EN HORIZONTAL CUANDO SEA MAS DE  */
+.main-nav{
+    z-index: 2;
+    width: 32%;
+    bottom: 0px;
+    display: flex;
+    position: absolute;
+    background: var(--color-menu);
+    transform: translateY(-200%);
+    transition: transform 2s ease;
+    height: 95vh ;
+}
+
+/* MENU UL DE NAVEGACION VERTICAL */
+.menu-nav{
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    justify-content: space-evenly;
+    width: 100%;
+    text-align: center;
+}
+
+/* MOSTRAR AL HACER CLICK EN EL ICONO DE MENU */
+.show {
+    display: flex;
+    background: var(--color-menu);
+    flex-wrap: wrap;
+    transition: transform 0.8s ease;
+    transform: translateY(0px);
+}
+
+/* MENU LI DE NAVEGACION VERTICAL */
+.nav_list{
+    /* font-size: 0.8em; */
+    font-size: 30px;
+    display: flex;
+    justify-content: center;
+    /* background: coral; */
+}
+
+/* HOVER DEL MENU LI DE NAVEGACION VERTICAL */
+.nav_list:hover{
+    /* background: rgba(133, 132, 127, 0.5); */
+    background: rgba(214, 241, 61, 0.767);
+    cursor: pointer;
+    /* border-left: 5px solid rgb(62, 192, 10); */
+    border-left: 1.2vw solid rgb(13, 168, 39);
+}
+
+/* MENU DE ELEMENTO A DE NAVEGACION VERTICAL */
+.list__item{
+    padding: 5% 0;
+    /* margin: 0 15px; */
+    /* width: 100%; */
+    /* color: rgb(139, 19, 19); */
+    color: rgb(2, 3, 29);
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 55%;
+}
+
+/* HEADER PRINCIPAL */
+.main-header{
+    text-align: center;
+    display: flex;
+    position: relative;
+    width: 100%;
+    align-items: center;
+    height: 5%;
+    background-color: var(--color-container);
+    /* background-color: red; */
+}
+
+/* CONTENEDOR DONDE SE ENCUENTRA EL ICONO DEL MENU */
+.header-icon_menu{
+    color: var(--color-icon);
+    position: absolute;
+    height: 5vh;
+    /* VER EL PRIMER PADDING EN MEDIDAS MAYORES A 720px */
+    padding: 0 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    /* background-color: rgb(41, 35, 35); */
+}
+
+/* TEXTO DEL HEADER */
+.header__text{
+    width: 100%;
+    text-align: center;
+}
+
+/* COLOR Y ANCHO DE LA BARRA DE SCROLL */
+::-webkit-scrollbar {
+    background: rgba(140, 86, 25, 0.7);
+    width: 10px;
+}
+
+/* COLOR DEL THUMB DE LA BARRA DE SCROLL(BARRA QUE SE MUEVE) */
+::-webkit-scrollbar-thumb{
+    background: rgba(224, 211, 25, 0.5);
+    /* background-color: rgba(140, 86, 25, 0.7); */
+    
+}
+
+/* AQUI ES DONDE SE DIBUJARA TODO EL CONTENIDO DINAMICO */
+.main-medium{
+    position: relative;
+    height: 90%;
+    overflow-y: auto;
+    background-color: rgba(140, 86, 25, 0.7);
+}
+
+/*                                                  CONTENIDO PARA EL FRAME 1 Y 2                                       */
+.medium-img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    background-image: url('../img/cocina.jpg');
+    /* background-color: rgb(51, 115, 189); */
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+
+}
+
+.main-medium_data{
+    position: absolute;
+    top: 50%;
+    height: 100%;
+    left: 50%;
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center;
+    align-content: space-around;
+    transform: translate(-50%, -50%);
+}
+
+.first-button_data,
+.second-button_data{
+    width: 100%;
+    font-size: 18px;
+}
+
+.text__ingredientes,
+.text__platoAleatorio{
+    border: 2px solid rgb(0, 0, 0);
+    border-radius: 50px ;
+    background-color: rgb(51, 115, 189);
+    padding: 10px 20px;
+    text-decoration: none;
+    font-weight: bold;
+    color: rgb(227, 233, 228);
+}
+
+.text__ingredientes:hover,
+.text__platoAleatorio:hover{
+    background-color: rgb(227, 233, 228);
+    color: rgb(51, 115, 189);
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.text__platoAleatorio{
+    padding: 10px;
+}
+
+/*                                                  FIN DEL CONTENIDO FRAME 1 Y 2                                       */
+
+/* FOOTER PRINCIPAL */
+.main-footer{
+    position: absolute;
+    bottom: 0;
+    display: flex;
+    width: 100%;
+    height: 5%;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: var(--color-container);
+}
+
+/*                                                  CONTENIDO PARA EL FRAME 3 Y 4                                       */
+.container-ingredientes{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 15px auto;
+    font-weight: bold;
+    height: 8vh;
+    max-width: 500px;
+    /* font-size: 22px; */
+}
+
+.parrafo__ingrediente{
+    font-size: 16px;
+    /* 40px para menos de 320px de viewport */
+    width: 55%; 
+    color: #fff;
+    text-align: center;
+}
+
+.img_ingrediente{
+    border-radius: 50%;
+    border: 2px solid #1098C3;
+    width: 55px;
+    height: 53px;
+}
+
+.checks{
+    transform: scale(1.5);
+}
+
+.container-pretitle{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    margin: 10px auto;
+    height: 8vh;
+}
+
+.pretitle{
+    font-size: 18px;
+    /* 40px para menos de 320px de viewport */
+    color: #fff;
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+}
+
+.container-buttons{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-bottom: 25px;
+    margin-top: 40px;
+    font-weight: bold;
+    width: 100%;
+    padding-left: 8%;
+    padding-right: 8%;
+}
+
+.text__volver,
+.text__aplicar{
+    border: 2px solid rgb(0, 0, 0);
+    border-radius: 50px ;
+    background-color: rgb(51, 115, 189);
+    padding: 10px 20px;
+    text-decoration: none;
+    font-weight: bold;
+    color: rgb(227, 233, 228);
+}
+
+.text__volver:hover,
+.text__aplicar:hover{
+    background-color: rgb(199, 199, 199);
+    color: rgb(7, 68, 138);
+    font-weight: bold;
+}
+
+/*                                                  FIN DEL CONTENIDO FRAME 3 Y 4                                       */
+
+/*                                                  CONTENIDO PARA EL FRAME 5 Y 6                                       */
+
+.container-title{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    color: #fff;
+    font-size: 36px;
+    height: 8vh;
+    margin-bottom: 10px;
+}
+
+.title{
+    -webkit-text-stroke: 0.5px #13BB38;
+}
+
+.container-platos{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    font-weight: bold;
+    height: 40vh;
+    /* width: 50%; */
+    max-width: 500px;
+    width: 100%;
+    position: relative;
+}
+
+.img_plato{
+    position: absolute;
+    width: 100%;
+    height: 40vh;
+    /* IMAGENES DE 700 A 940 de ancho */
+}
+
+.container-posttitle{
+    height: 8vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.posttitle{
+    font-size: 18px;
+    /* 40px para menos de 320px de viewport */
+    color: #fff;
+    font-weight: bold;
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+}
+
+.container-description{
+    height: 8vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px;
+    padding: 0 10%;
+}
+
+.description{
+    font-size: 14px;
+    /* 40px para menos de 320px de viewport */
+    color: #fff;
+    font-weight: bold;
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+}
+
+.description__span{
+    color: #18DDAE;
+}
+
+/*                                                  FIN DEL CONTENIDO FRAME 3 Y 4                                       */
+
+/* DETALLES DEL CONTENEDOR DE BOTONES */
+
+.modification{
+    margin: 20px auto 0 auto;
+    height: 8vh;
+    padding: 0;
+    /* padding-left: 3%; */
+    max-width: 500px;
+}
+
+.container{
+    position: relative;
+    height: 100%;
+    overflow-y: auto;
+    background-color: rgba(140, 86, 25, 0.7);
+}
+
+.proceso{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    flex-wrap: wrap;
+}
+
+.textproceso{
+    width: 100%;
+    text-align: center;
+}
+
+.imgConstruccion{
+    width: 50%;
+}
+
+@media (max-width: 300px) {
+    .nav_list:nth-child(1){
+        font-size: 1.5em;
+    }
+    
+    .nav_list:nth-child(2){
+        font-size: 1.5em;
+    }
+    
+    .nav_list:nth-child(3){
+        font-size: 1.2em;
+    }
+    
+    .nav_list:nth-child(4){
+        font-size: 1.4em;
+    }
+
+}
+
+@media (max-width: 400px) {
+
+    .medium-img {
+        width: 100%;
+        height: 100%;
+        display: block;
+        background-image: url('../img/platos.jpg');
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+    
+    }
+
+}
+
+
+
+
