@@ -311,6 +311,7 @@ body{
 
 .title{
     -webkit-text-stroke: 0.5px #13BB38;
+    text-align: center;
 }
 
 .container-platos{
