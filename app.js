@@ -203,13 +203,14 @@ const drawFrame3_4 = (data) => {
 }
 
 //Funcion que se encarga de dibujar el contruyendo y en desarrollo
-const drawDesarrollo = (dataText, dataImagen) => {
+const drawDesarrollo = (dataText) => {
+
     container_medium.innerHTML = '';
     const drawContent = `
             <div class="container">
                 <div class="proceso">
                     <h2 class="textproceso">Pagina ${dataText} esta en construcción...</h2>
-                    <img src=${dataImagen} class="imgConstruccion" alt="construcn">
+                    <img src="https://firebasestorage.googleapis.com/v0/b/apptest-cbeec.appspot.com/o/construct.png?alt=media&token=e1277069-9202-4840-bfb5-25a2f3193606" class="imgConstruccion" alt="construcn">
                 </div>
             </div>
             `
