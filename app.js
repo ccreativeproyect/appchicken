@@ -6,6 +6,8 @@ toggle.addEventListener('click', () => {
     nav.classList.toggle('show');
 })
 
+// fetch('/img/construct.png')
+
 
 
 //Constantes
@@ -64,15 +66,15 @@ mainBtnPlatoAleatorio.addEventListener('click', e => {
 })
 
 mainBtnObjetivos.addEventListener('click', e => {
-    drawDesarrollo('del objetivo')
+    drawDesarrollo('del objetivo', "/img/construct.png")
 })
 
 mainBtnHerramientas.addEventListener('click', e => {
-    drawDesarrollo('de las herramientas')
+    drawDesarrollo('de las herramientas', "/img/construct.png")
 })
 
 mainBtnDev.addEventListener('click', e => {
-    drawDesarrollo('del desarrollador')
+    drawDesarrollo('del desarrollador', "/img/construct.png")
 })
 
 
@@ -201,13 +203,13 @@ const drawFrame3_4 = (data) => {
 }
 
 //Funcion que se encarga de dibujar el contruyendo y en desarrollo
-const drawDesarrollo = (dataText) => {
+const drawDesarrollo = (dataText, dataImagen) => {
     container_medium.innerHTML = '';
     const drawContent = `
             <div class="container">
                 <div class="proceso">
                     <h2 class="textproceso">Pagina ${dataText} esta en construcción...</h2>
-                    <img src="/img/construct.png" class="imgConstruccion" alt="construccion">
+                    <img src=${dataImagen} class="imgConstruccion" alt="construcn">
                 </div>
             </div>
             `
