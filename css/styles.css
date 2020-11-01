@@ -27,7 +27,6 @@ body{
     display: flex;
     flex-direction: column;
     position: relative;
-    /* background-color: var(--color-container); */
     height: 100vh;
     
 }

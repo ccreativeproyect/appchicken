@@ -6,9 +6,6 @@ toggle.addEventListener('click', () => {
     nav.classList.toggle('show');
 })
 
-// fetch('/img/construct.png')
-
-
 
 //Constantes
 const mainBtnIngrediente = document.getElementById('mainBtnIngrediente');
@@ -78,11 +75,9 @@ mainBtnDev.addEventListener('click', e => {
 })
 
 
-
 // Funcion que carga los ingredientes mediante la funcion loadAleatorio 
 const loadAleatorio = async () => {
 
-    // const url = `/data.json`;
     const url = `https://appkitchen.herokuapp.com/platos`;
     const response = await fetch(url)
     let arrNameAleatorio = [];
